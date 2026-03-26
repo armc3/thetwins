@@ -255,6 +255,15 @@ body {
     margin-bottom: 16px;
 }
 
+.report-song-name {
+    font-family: 'Bebas Neue', var(--font-heading);
+    font-size: 2rem;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
 .report-campaign {
     font-family: var(--font-data);
     font-size: 1.6rem;
@@ -1906,6 +1915,7 @@ a.socials-breakdown-label:hover {
                 <div class="report-hero-gradient"></div>
                 <div class="report-hero-content">
                     <h1 class="report-artist-name">${esc(data.artist_name)}</h1>
+                    ${data.song_name ? `<p class="report-song-name">${esc(data.song_name)}</p>` : ''}
                     ${data.campaign_name ? `<p class="report-campaign">${esc(data.campaign_name)}</p>` : ''}
                     <p class="report-week">w/c ${fmtDateLong(data.week_commencing)}</p>
                 </div>
